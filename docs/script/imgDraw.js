@@ -6,7 +6,6 @@ var imageDraw = function() {
     
     var cvs = document.getElementById('cvs1');
     var ctx = cvs.getContext('2d');
-    ctx.clearRect(0,0,600,800);
 
     var opc = document.getElementById("opc").value;
     opc = opc*0.01;
@@ -19,6 +18,7 @@ var imageDraw = function() {
     
 
     img.onload = function(){
+        ctx.clearRect(0,0,600,800);
         ctx.drawImage(img, 0, 0, 600, 800);
         ctx.save();
         ctx.globalCompositeOperation = 'multiply';
