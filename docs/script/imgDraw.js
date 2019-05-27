@@ -1,0 +1,14 @@
+function imageDraw() {
+    //2Dコンテキストのオブジェクトを生成する
+    var cvs = document.getElementById('cvs1');
+    var ctx = cvs.getContext('2d');
+  
+    //画像オブジェクトを生成
+    var img = new Image();
+    img.src = "inu.png";
+  
+    //画像をcanvasに設定
+    img.onload = function(){
+      ctx.drawImage(img, 0, 0, 800, 600);  //400x300に縮小表示
+    }
+  }
