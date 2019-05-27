@@ -5,10 +5,10 @@ function imageDraw() {
   
     //画像オブジェクトを生成
     var img = new Image();
-    img.src = "../img/v_sotai.png";
+    img.src = "/img/v_sotai.png";
   
     //画像をcanvasに設定
     img.onload = function(){
-      ctx.drawImage(img, 0, 0, 800, 600);  //400x300に縮小表示
+      ctx.drawImage(img, 0, 0, 600, 800);  //400x300に縮小表示
     }
   }
