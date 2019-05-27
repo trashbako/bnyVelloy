@@ -2,11 +2,13 @@ window.onload = function(){
     imageDraw();
 }
 
-function imageDraw() {
+var imageDraw = function() {
     
     var cvs = document.getElementById('cvs1');
     var ctx = cvs.getContext('2d');
-  
+    var opc = document.getElementById("opc").value;
+    opc = opc*0.1;
+    
     //画像オブジェクト
     var img = new Image();
     img.src = "./img/v_sotai.png";
@@ -15,17 +17,14 @@ function imageDraw() {
   
 
     img.onload = function(){
-        ctx.drawImage(img, 0, 0, 600, 800);
+        ctx.clearRect(0,0,900,1200);
+        ctx.drawImage(img, 0, 0, 900, 1200);
         ctx.save();
         ctx.globalCompositeOperation = 'multiply';
-        ctx.globalAlpha = 0.2;
+        ctx.globalAlpha = opc;
         tyt.onload = function(){
-            ctx.drawImage(tyt, 0, 0, 600, 800);
+            ctx.drawImage(tyt, 0, 0, 900, 1200);
         }
     }
     
-}
-
-function stockDraw(){
-
 }
