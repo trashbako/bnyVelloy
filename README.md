@@ -1,1 +1,1 @@
-好みのデニール数を決めよう！
+Let's change opacity
